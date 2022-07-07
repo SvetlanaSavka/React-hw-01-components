@@ -1,3 +1,4 @@
+//import { Item } from 'components/Statistics/Statistics.styled';
 import PropTypes from 'prop-types';
 import styles from './FriendList.module.css';
 

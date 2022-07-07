@@ -1,4 +1,7 @@
+//import { type } from '@testing-library/user-event/dist/type';
 import PropTypes from 'prop-types';
+//import { Table, TableData, TableHead } from './TransactionHistory.styled';
+
 import {
   Table,
   TableHead,
@@ -58,26 +61,27 @@ TransactionHistory.propTypes = {
 export const TransactionHistory = ({ items }) => {
   return (
     <table className={styles.table}>
-        <div className={styles.table}> 
-      <thead className={styles.link}>
-        <tr className={styles.header}>
-          <th className={styles.headertitle}>Type</th>
-          <th className={styles.headertitle}>Amount</th>
-          <th className={styles.headertitle}>Currency</th>
-        </tr>
-      </thead>
+      <div className={styles.table}>
+        <thead className={styles.link}>
+          <tr className={styles.header}>
+            <th className={styles.headertitle}>Type</th>
+            <th className={styles.headertitle}>Amount</th>
+            <th className={styles.headertitle}>Currency</th>
+          </tr>
+        </thead>
 
-      {items.map(item => {
-        return (
-          <Tr
-            className={styles.title}
-            key={item.id}
-            type={item.type}
-            amount={item.amount}
-            currency={item.currency}
-          ></Tr>
-        );
-      })}
+        {items.map(item => {
+          return (
+            <Tr
+              className={styles.title}
+              key={item.id}
+              type={item.type}
+              amount={item.amount}
+              currency={item.currency}
+            ></Tr>
+          );
+        })}
+      </div>
     </table>
   );
 };
